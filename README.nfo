@@ -24,7 +24,7 @@ What seems legit to me. Sort of.
 The inline asm may not be inlined anymore in consequence, 
 since the redzone is clobbered. 
 (redzone clobber constraint was introduced
-in 2024, but this doesn't help now)
+in 2024 by gcc, but this doesn't help now)
 
 
 2025 CC-BY-SA misc147, www.github.com/0x1kB
