@@ -1,0 +1,22 @@
+
+
+base
+====
+
+
+base tobase number [frombase] [padding] [padchar]
+
+
+Print 'number' in 'tobase', 2-36.
+
+
+encoding 0-9, a-z
+
+
+752 Bytes linked static.
+
+
+
+2025 CC-BY-SA misc147, www.github.com/0x1kB
+
+
