@@ -31,8 +31,7 @@ where I did add the stack memory.
 
 There I did add right padding, but wasn't able to get the 
 loops into a nice order in turn. repz wasn't possible as well,
-not without further complicated calculations.
-
+not without further complicated calculations and branches.
 
 
 2025 CC-BY-SA misc147, www.github.com/0x1kB
