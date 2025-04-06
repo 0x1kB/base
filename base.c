@@ -9,6 +9,7 @@ static int asmuitobuf(char *buf, unsigned int i, unsigned int base, int prec, co
 
 	asm volatile ( R"(
 .MARKAsM_asmuitobuf:
+	sub $0x80,%%rsp
 	xor %%edx,%%edx
 	#push %%rdx
 
@@ -58,6 +59,8 @@ static int asmuitobuf(char *buf, unsigned int i, unsigned int base, int prec, co
 
 9:
 	movb %%cl,(%%rdi)
+
+	add $0x80,%%rsp
 	)" : "+c"(prec), "+S"(i), "+D"(pbuf), "+a"(_base) : "g"(pad) : "rdx", "r9", "memory", "cc" );
 						
 	return ( pbuf-buf );

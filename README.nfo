@@ -21,10 +21,11 @@ To be exact, the table is pushed on the stack,
 by 'misusing' the stack as stack.
 What seems legit to me. Sort of.
 
-The inline asm may not be inlined anymore in consequence, 
-since the redzone is clobbered. 
+The inline reserves some space at the stack to not clobber
+the redzone.
 (redzone clobber constraint was introduced
 in 2024 by gcc, but this doesn't help now)
+
 
 
 2025 CC-BY-SA misc147, www.github.com/0x1kB
