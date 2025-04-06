@@ -9,12 +9,22 @@ base tobase number [frombase] [padding] [padchar]
 
 Print 'number' in 'tobase', 2-36.
 
-
 encoding 0-9, a-z
-
 
 752 Bytes linked static.
 
+The algorithm spares division and modulo by using a table,
+a division being one of the most costy instructions
+in processor cycles.
+
+To be exact, the table is pushed on the stack,
+by 'misusing' the stack as stack.
+What seems legit to me. Sort of.
+
+The inline asm may not be inlined anymore in consequence, 
+since the redzone is clobbered. 
+(redzone clobber constraint was introduced
+in 2024, but this doesn't help now)
 
 
 2025 CC-BY-SA misc147, www.github.com/0x1kB
