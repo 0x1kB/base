@@ -11,7 +11,6 @@ static int asmuitobuf(char *buf, unsigned int i, unsigned int base, int prec, co
 .MARKAsM_asmuitobuf:
 	sub $0x80,%%rsp
 	xor %%edx,%%edx
-	#push %%rdx
 
 	inc %%edx
 	push %%rdx
@@ -29,7 +28,6 @@ static int asmuitobuf(char *buf, unsigned int i, unsigned int base, int prec, co
 	jle 2f
 	mov %4,%%al
 	repnz stosb
-	#jmp 2f
 
 6:
 	pop %%rcx
@@ -39,12 +37,6 @@ static int asmuitobuf(char *buf, unsigned int i, unsigned int base, int prec, co
 	sub %%ecx,%%esi
 	jae 3b
 	add %%ecx,%%esi
-
-	#cmp %%edx,%%esi
-	#jb 4f
-	#inc %%eax
-	#sub %%edx,%%esi
-	#jmp 3b
 
 4:
 	cmp $'9',%%eax
