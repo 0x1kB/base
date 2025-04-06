@@ -21,10 +21,17 @@ To be exact, the table is pushed on the stack,
 by 'misusing' the stack as stack.
 What seems legit to me. Sort of.
 
-The inline reserves some space at the stack to not clobber
+The inline wastes some space at the stack to not clobber
 the redzone.
 (redzone clobber constraint was introduced
 in 2024 by gcc, but this doesn't help now)
+
+Luckily I did look again into the extend version of this function,
+where I did add the stack memory.
+
+There I did add right padding, but wasn't able to get the 
+loops into a nice order in turn. repz wasn't possible as well,
+not without further complicated calculations.
 
 
 
