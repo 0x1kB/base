@@ -68,7 +68,7 @@ static int asmuitobuf(char *buf, unsigned int i, unsigned int base, int prec, co
 MAIN{
 	if ( argc<3 || ( argv[1][0] == '-' )){
 		ewrites("usage: base tobase number [numberbase (2-36)] [padding] [padchar]\n"
-				"\n 2025 CC-BY-SA misc147\n www.github.com/0x1Kb\n");
+				"\n 2025 CC-BY-SA misc147\n www.github.com/0x1kB\n");
 		exit(1);
 	}
 
